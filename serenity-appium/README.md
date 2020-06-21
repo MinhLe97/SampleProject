@@ -1,23 +1,29 @@
-### Running in Sauce Labs ###
-mvn surefire:test -Dtest=WordPressAppTest -Dsaucelabs.url=http://**sauceId**:**sauceKey**@ondemand.saucelabs.com:80/wd/hub -Dsaucelabs.access.key=**sauceKey** -Dsaucelabs.user.id=**sauceId**
+# Serenity Appium project
 
-### Running in Kobiton ###
-mvn surefire:test -Dwebdriver.driver= appium -Dtest=IFixitAppTest -Dappium.hub=https://**username**:**apiKey**@api.kobiton.com/wd/hub -Dappium.platformName=iOS -Dappium.deviceName="iPhone 6" -Dappium.deviceGroup=KOBITON -Dappium.app=https://s3-ap-southeast-1.amazonaws.com/kobiton-devvn/apps-test/demo/iFixit.ipa
+## Get the code
 
-### Before Run ###
+Git:
 
-1. Start appium server ( command line / appium desktop )
-2. Create simulator with necessary iOS version and mention same under __appium.platformVersion__  and __appium.deviceName__
-3. under **resources** folder, unzip **WordPress.zip** to get **WordPress.app** file needed for automation
-<br>
+    git clone https://github.com/MinhLe97/AutomationSampleProject.git
+    cd AutomationSampleProject/serenity-appium
 
 
-### How To Run From Command Line ###
+Or simply [download a zip](https://github.com/MinhLe97/AutomationSampleProject/archive/master.zip) file.
 
-#### iOS Test Cases ####
-1. From command line run below from **/serenity-core/serenity-appium**, make sure to pass complete path where**WordPress.app**is located
+## Use Maven
+Install [Maven](https://maven.apache.org/install.html)
 
-   **mvn clean verify -Dappium.app=FULL_PATH_REQUIRED/serenity-core/serenity-appium/src/test/java/integration/resources/WordPress.app**
+Build project with [Maven](https://maven.apache.org/run-maven/)
 
-<br>
+## Before Run
+Input credential information in serenity.properties [file](serenity.properties)
+###Saucelabs emulator ([user setting](https://app.saucelabs.com/user-settings))
+    saucelabs.url=https://{userid}:{accessKey}f@ondemand.us-west-1.saucelabs.com:443/wd/hub
+    saucelabs.access.key={accessKey}
+    saucelabs.user.id={userid}
+###Saucelabs realDevice
+    appium.hub=https://us1-manual.app.testobject.com/wd/hub
+    appium.testobject_api_key={testobject_api_key}
 
+## Run tests
+Right click on GuruWebTest and select 'Run'

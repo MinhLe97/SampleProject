@@ -93,6 +93,66 @@ public class GuruStep extends ScenarioSteps {
     }
 
     @Step
+    public void ClickAddNewAccount() {
+        guruPage.ClickAddNewAccount();
+    }
+
+    @Step
+    public void InputCustomerId() {
+        guruPage.InputCustomerId();
+    }
+
+    @Step
+    public void InputInitialDepositTextBox() {
+        guruPage.InputInitialDepositTextBox();
+    }
+
+    @Step
+    public void SubmitNewAccount() {
+        guruPage.SubmitNewAccount();
+    }
+
+    @Step
+    public void VerifyNewAccount() {
+        guruPage.VerifyNewAccount();
+    }
+
+    @Step
+    public void VerifyCurrentAmount() {
+        guruPage.VerifyCurrentAmount();
+    }
+
+    @Step
+    public void ClickDeposit() {
+        guruPage.ClickDeposit();
+    }
+
+    @Step
+    public void InputAccountNo() {
+        guruPage.InputAccountNo();
+    }
+
+    @Step
+    public void InputDepositAmountTextBox() {
+        guruPage.InputDepositAmountTextBox();
+    }
+
+    @Step
+    public void InputDesc() {
+        guruPage.InputDesc();
+    }
+
+    @Step
+    public void SubmitDeposit() {
+        guruPage.SubmitDeposit();
+    }
+
+    @Step
+    public void VerifyDeposit() {
+        guruPage.VerifyDeposit();
+    }
+
+    @Step
     public void Cleanup() {
         guruPage.Cleanup();
     }

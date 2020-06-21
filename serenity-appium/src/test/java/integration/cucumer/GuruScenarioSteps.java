@@ -1,9 +1,5 @@
 package integration.cucumer;
 
-//import cucumber.api.java.en.And;
-//import cucumber.api.java.en.Given;
-//import cucumber.api.java.en.Then;
-//import cucumber.api.java.en.When;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -20,17 +16,17 @@ public class GuruScenarioSteps {
         guruStep.GoToGuruPage();
     }
 
-    @Given("User input UserName")
+    @And("User input UserName")
     public void userInputUserName() {
         guruStep.InputUserName();
     }
 
-    @Given("User input Password")
+    @And("User input Password")
     public void userInputPassword() {
         guruStep.InputPassword();
     }
 
-    @Given("User click on Login")
+    @And("User click on Login")
     public void userClickOnLogin() {
         guruStep.Login();
     }
@@ -45,59 +41,115 @@ public class GuruScenarioSteps {
         guruStep.ClickAddCustomer();
     }
 
-    @Given("User input customer name")
+    @And("User input customer name")
     public void UserInputCustomerName() {
         guruStep.InputCustomerName();
     }
 
-    @Given("User input dob")
+    @And("User input dob")
     public void UserInputDob() {
         guruStep.InputCustomerDob();
     }
 
-    @Given("User input address")
+    @And("User input address")
     public void UserInputAddress() {
         guruStep.InputCustomerAddress();
     }
 
-    @Given("User input city")
+    @And("User input city")
     public void UserInputCity() {
         guruStep.InputCustomerCity();
     }
 
-    @Given("User input state")
+    @And("User input state")
     public void UserInputState() {
         guruStep.InputCustomerState();
     }
 
-    @Given("User input pin")
+    @And("User input pin")
     public void UserInputPin() {
         guruStep.InputCustomerPin();
     }
 
-    @Given("User input mobile number")
+    @And("User input mobile number")
     public void UserInputMobile() {
         guruStep.InputCustomerMobile();
     }
 
-    @Given("User input email")
+    @And("User input email")
     public void UserInputEmail() {
         guruStep.InputCustomerEmail();
     }
 
-    @Given("User input password")
+    @And("User input password")
     public void UserInputPassword() {
         guruStep.InputCustomerPassword();
     }
 
-    @Given("User click submit")
+    @And("User click submit new customer")
     public void UserClickSubmit() {
         guruStep.ClickSubmitButton();
     }
 
-    @Then("User create successful")
+    @Then("User create new customer successful")
     public void UserCreateSuccessful() {
         guruStep.VerifyCustomerId();
+    }
+
+    @Given("User click new account")
+    public void ClickAddNewAccount() {
+        guruStep.ClickAddNewAccount();
+    }
+
+    @And("User input customer Id")
+    public void InputCustomerId() {
+        guruStep.InputCustomerId();
+    }
+
+    @And("User input initial deposit")
+    public void InputInitialDepositTextBox() {
+        guruStep.InputInitialDepositTextBox();
+    }
+
+    @And("User click submit new account")
+    public void SubmitNewAccount() {
+        guruStep.SubmitNewAccount();
+    }
+
+    @Then("User create new account successful")
+    public void VerifyNewAccount() {
+        guruStep.VerifyNewAccount();
+        guruStep.VerifyCurrentAmount();
+    }
+
+    @Given("User click deposit")
+    public void ClickDeposit() {
+        guruStep.ClickDeposit();
+    }
+
+    @And("User input accountNo")
+    public void InputAccountNo() {
+        guruStep.InputAccountNo();
+    }
+
+    @And("User input deposit amount")
+    public void InputDepositAmountTextBox() {
+        guruStep.InputDepositAmountTextBox();
+    }
+
+    @And("User input desc")
+    public void InputDesc() {
+        guruStep.InputDesc();
+    }
+
+    @And("User submit deposit")
+    public void SubmitDeposit() {
+        guruStep.SubmitDeposit();
+    }
+
+    @Then("User deposit successful")
+    public void VerifyDeposit() {
+        guruStep.VerifyDeposit();
     }
 
     @Then("Cleanup")
