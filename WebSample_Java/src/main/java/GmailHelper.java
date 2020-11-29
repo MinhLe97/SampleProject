@@ -18,8 +18,8 @@ public class GmailHelper {
 		String resetLink = "not found";
         String strResult = new String();
         
-        String USERNAME = "le.minh.971912@gmail.com";
-        String PASSWORD = "leminh1997";
+        String USERNAME = "";
+        String PASSWORD = "";
 
 		try {
 
